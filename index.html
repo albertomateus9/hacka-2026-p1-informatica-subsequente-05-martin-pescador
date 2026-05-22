@@ -1,40 +1,304 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Martin Pescador | Hacka P1 Informatica Subsequente</title>
-    <meta name="description" content="Projeto Martin Pescador da Hacka P1 Informatica Subsequente em preparacao." />
-    <link rel="icon" href="data:," />
-    <style>
-      :root { color-scheme: light; font-family: "Segoe UI", Arial, sans-serif; color: #082f49; background: #ecfeff; }
-      * { box-sizing: border-box; }
-      body { margin: 0; background: linear-gradient(135deg, #bae6fd, #fff 46%, #fef3c7); }
-      main { display: grid; width: min(920px, calc(100% - 2rem)); min-height: 100vh; margin: 0 auto; align-content: center; padding: 2rem 0; }
-      section { border: 1px solid #bae6fd; border-radius: 8px; padding: clamp(1rem, 4vw, 2.5rem); background: rgba(255,255,255,.94); box-shadow: 0 20px 60px rgba(8,47,73,.13); }
-      p { color: #486477; line-height: 1.6; }
-      .eyebrow { margin: 0; color: #0369a1; font-size: .9rem; font-weight: 900; text-transform: uppercase; }
-      h1 { margin: .65rem 0 1rem; color: #0c4a6e; font-size: clamp(2.35rem, 7vw, 5rem); line-height: 1; letter-spacing: 0; }
-      dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; margin: 1.5rem 0 0; }
-      div { border-left: 4px solid #f59e0b; border-radius: 8px; padding: .8rem; background: #f7fcff; }
-      dt { color: #0369a1; font-size: .85rem; font-weight: 900; }
-      dd { margin: .35rem 0 0; font-weight: 800; }
-      @media (max-width: 620px) { dl { grid-template-columns: 1fr; } }
-    </style>
-  </head>
-  <body>
-    <main>
-      <section>
-        <p class="eyebrow">Hacka 2026 - P1 Informatica Subsequente</p>
-        <h1>Martin Pescador</h1>
-        <p>Projeto em preparacao: Achados e Perdidos do Vilhena.</p>
-        <dl>
-          <div><dt>Gerente de Ideias</dt><dd>Rafaella</dd></div>
-          <div><dt>HTML</dt><dd>Hurdiel</dd></div>
-          <div><dt>CSS</dt><dd>Juliana</dd></div>
-          <div><dt>JavaScript</dt><dd>Nildson</dd></div>
-        </dl>
-      </section>
-    </main>
-  </body>
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Pescador | Achados e Perdidos do Vilhena</title>
+  <meta name="description" content="Portal oficial de achados e perdidos da Escola Vilhena Alves. Desenvolvido pela Equipe Martin Pescador." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
+  <!-- Estilo Local -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <div class="logo-circle">
+          <i class="fa-solid fa-search"></i>
+        </div>
+        <span class="brand-name">Martin Pescador</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#mural" class="nav-link">Mural de Itens</a></li>
+        <li><a href="#reportar" class="nav-link">Reportar Perda/Achado</a></li>
+        <li><a href="#equipe" class="nav-link">Equipe</a></li>
+      </ul>
+      
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Alternar Tema">
+        <i class="fa-solid fa-sun" id="theme-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- SEÇÃO HERO (INTRODUÇÃO) -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tagline">
+          <i class="fa-solid fa-clipboard-question"></i>
+          <span>Achados e Perdidos • Vilhena Alves</span>
+        </div>
+        <h1 class="hero-title">
+          Perdeu ou achou algo na escola? <span>Nós ajudamos!</span>
+        </h1>
+        <p class="hero-desc">
+          O portal Martin Pescador foi criado para centralizar a comunicação de pertences perdidos e encontrados na EETEPA Vilhena Alves. Nosso objetivo é devolver cadernos, eletrônicos, chaves e outros itens aos seus devidos donos com facilidade.
+        </p>
+        <div class="hero-buttons">
+          <a href="#mural" class="btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i> Procurar Pertence
+          </a>
+          <a href="#reportar" class="btn btn-secondary">
+            <i class="fa-solid fa-bullhorn"></i> Reportar Item
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-graphic">
+        <div class="glow-circle"></div>
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="mockup-badge">Recente</span>
+          </div>
+          <div class="mockup-search-sim" style="margin-bottom: 1.25rem;">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Pesquisar por "Calculadora"...</span>
+          </div>
+          <div style="display: flex; gap: 1rem; align-items: center; background: rgba(255,255,255,0.05); padding: 0.8rem; border-radius: 8px; border: 1px solid var(--line);">
+            <i class="fa-solid fa-calculator" style="font-size: 2rem; color: var(--accent);"></i>
+            <div>
+              <h4 style="font-size: 0.95rem; margin-bottom: 0.15rem;">Calculadora Científica</h4>
+              <p style="font-size: 0.72rem; color: var(--text-secondary);"><i class="fa-solid fa-location-dot"></i> Lab 2 • Achado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DO MURAL DE ITENS -->
+  <section class="mural-section" id="mural">
+    <div class="container">
+      <h2>Mural de Achados e Perdidos</h2>
+      
+      <!-- Painel de Busca e Filtros -->
+      <div class="search-filters-wrapper">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" class="search-input" placeholder="O que você está procurando? Digite caneta, chave, casaco..." />
+        </div>
+        
+        <div class="filters-row">
+          <div class="filter-group">
+            <button class="filter-btn active" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="eletronicos">Eletrônicos</button>
+            <button class="filter-btn" data-category="documentos">Documentos</button>
+            <button class="filter-btn" data-category="vestuario">Vestuário</button>
+            <button class="filter-btn" data-category="materiais">Materiais</button>
+          </div>
+          
+          <div>
+            <select id="filter-status" class="filter-select">
+              <option value="all">Qualquer Status</option>
+              <option value="perdido">Apenas Perdidos</option>
+              <option value="achado">Apenas Achados</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Grid de Itens Dinâmicos -->
+      <div class="mural-grid" id="mural-grid">
+        <!-- Renderizado dinamicamente via JS -->
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE REPORTE -->
+  <section class="report-section" id="reportar">
+    <div class="container report-layout">
+      
+      <div class="report-info-panel">
+        <h3>Reportar um Pertence</h3>
+        <p>
+          Se você perdeu algo ou encontrou um pertence perdido pela escola, anuncie no mural. Preencha os detalhes e categorize corretamente para que a comunidade possa identificar e ajudar a devolver.
+        </p>
+        
+        <div class="report-features">
+          <div class="feat-item">
+            <div class="feat-icon-box">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div class="feat-text">
+              <h4>Segurança e Privacidade</h4>
+              <p>Evite divulgar dados excessivos. A devolução de eletrônicos ou objetos de valor será validada na secretaria.</p>
+            </div>
+          </div>
+          
+          <div class="feat-item">
+            <div class="feat-icon-box">
+              <i class="fa-solid fa-arrows-spin"></i>
+            </div>
+            <div class="feat-text">
+              <h4>Atualização Instantânea</h4>
+              <p>Ao enviar o formulário, o pertence é indexado imediatamente no topo do mural para todos verem.</p>
+            </div>
+          </div>
+          
+          <div class="feat-item">
+            <div class="feat-icon-box">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="feat-text">
+              <h4>Colaboração Voluntária</h4>
+              <p>Mais do que achar objetos, criamos um espaço de empatia e solidariedade entre os turnos diurno e noturno.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="report-form-card">
+        <h3>Formulário de Notificação</h3>
+        <form id="report-form" novalidate>
+          
+          <div class="form-group">
+            <label class="form-label" for="item-title">Nome do Pertence</label>
+            <input type="text" id="item-title" class="form-control" placeholder="Ex: Casaco de Moletom Cinza" required />
+          </div>
+          
+          <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label class="form-label" for="item-category">Categoria</label>
+              <select id="item-category" class="form-control" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="eletronicos">Eletrônicos</option>
+                <option value="documentos">Documentos</option>
+                <option value="vestuario">Vestuário</option>
+                <option value="materiais">Materiais</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label" for="item-status">Status</label>
+              <select id="item-status" class="form-control" required>
+                <option value="" disabled selected>Selecione...</option>
+                <option value="perdido">Perdi este item</option>
+                <option value="achado">Achei este item</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="item-location">Local (onde perdeu/achou)</label>
+            <input type="text" id="item-location" class="form-control" placeholder="Ex: Pátio Central ou Sala 202" required />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="item-desc">Descrição Detalhada do Objeto</label>
+            <textarea id="item-desc" class="form-control" rows="4" placeholder="Descreva características físicas, cor, marca, marcas de uso ou conteúdo (se for estojo/mochila)" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-submit">
+            Notificar Pertence <i class="fa-solid fa-bullhorn"></i>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- SEÇÃO EQUIPE E CRÉDITOS -->
+  <section class="team-section" id="equipe">
+    <div class="container">
+      <h2>Equipe Martin Pescador</h2>
+      <div class="team-grid">
+        
+        <!-- Membro 1: Rafaella -->
+        <div class="team-card">
+          <div class="team-avatar">R</div>
+          <h4>Rafaella</h4>
+          <span class="team-role">Gerente de Ideias</span>
+        </div>
+        
+        <!-- Membro 2: Hurdiel -->
+        <div class="team-card">
+          <div class="team-avatar">H</div>
+          <h4>Hurdiel</h4>
+          <span class="team-role">Construtor HTML</span>
+        </div>
+        
+        <!-- Membro 3: Juliana -->
+        <div class="team-card">
+          <div class="team-avatar">J</div>
+          <h4>Juliana</h4>
+          <span class="team-role">Estilista CSS</span>
+        </div>
+        
+        <!-- Membro 4: Nildson -->
+        <div class="team-card">
+          <div class="team-avatar">N</div>
+          <h4>Nildson</h4>
+          <span class="team-role">Desenvolvedor JS</span>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-circle" style="width: 2rem; height: 2rem; font-size: 1rem;">
+          <i class="fa-solid fa-search"></i>
+        </div>
+        <span>Martin Pescador</span>
+      </div>
+      <div class="footer-disclaimer">
+        <p>
+          Este site é um projeto acadêmico desenvolvido durante o Hackathon 2026 da turma P1 de Informática Subsequente da Escola de Ensino Técnico do Estado do Pará (EETEPA) Vilhena Alves, Belém-PA.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL: REPORT CONCLUÍDO COM SUCESSO -->
+  <div class="modal" id="success-modal">
+    <div class="modal-content-wrapper">
+      <button class="modal-close-btn" aria-label="Fechar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-success-icon">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Notificação Registrada!</h3>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Seu pertencente foi indexado com sucesso no topo do mural de Achados e Perdidos. Fique atento às atualizações na escola!
+      </p>
+      <button class="btn btn-primary modal-close-btn" style="position: static; border-radius: 8px; width: 100%;">
+        Voltar ao Mural
+      </button>
+    </div>
+  </div>
+
+  <!-- Script Local -->
+  <script src="script.js"></script>
+</body>
 </html>
